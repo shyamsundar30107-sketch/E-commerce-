@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Store</title>
+</head>
+<body>
+    <h1>🛒 My Store</h1>
+    <a href="/cart">Go to Cart</a>
+
+    <hr>
+
+    {% for product in products %}
+        <div>
+            <h2>{{ product.name }}</h2>
+            <p>Price: ₹{{ product.price }}</p>
+            <a href="/add_to_cart/{{ product.id }}">Add to Cart</a>
+        </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>
